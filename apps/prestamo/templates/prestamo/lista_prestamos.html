@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Préstamos</title>
+</head>
+<body>
+    <h1>Préstamos</h1>
+    <ul>
+        {% for prestamo in prestamos %}
+            <li>{{ prestamo.libro }} - {{ prestamo.socio }} - {{ prestamo.fecha_prestamo }} - {{ prestamo.fecha_devolucion }} - {{ prestamo.devuelto }}</li>
+        {% empty %}
+            <li>No hay préstamos registrados</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
